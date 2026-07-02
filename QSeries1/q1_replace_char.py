@@ -1,12 +1,9 @@
-"""Take string as a input
-first character is stored in new variable
-from remaining part second occurance of first character is replaced by "$"
-concate two string to get changed string
-"""
-
-
-def change_text(text):  # function to replace string character
-
+def change_text(text):
+    """Take string as a input
+       first character is stored in new variable
+       from remaining part second occurance of first character is replaced by "$"
+       concate two string to get changed string
+    """
     first = text[0]  # store first character
     remaining = text[1:]  # remaining characters
     new = remaining.replace(
@@ -15,10 +12,8 @@ def change_text(text):  # function to replace string character
     newtext = first + new  # concatenation of string
     print(newtext)
 
-
 text = str(input("Enter a string: "))
 change_text(text)
-
 
 # without replace method
 def change_text(text):
@@ -32,7 +27,6 @@ def change_text(text):
         else:
             result = result + text[i]
     print(result)
-
 
 text = "restart"
 change_text(text)
