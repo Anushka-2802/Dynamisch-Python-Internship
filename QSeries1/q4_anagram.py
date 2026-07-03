@@ -1,6 +1,7 @@
 # Input from user
-str1 = str(input("Enter a string1: "))
-str2 = str(input("Enter a string2: "))
+
+str1 = input("Enter a string1: ")
+str2 = input("Enter a string2: ")
 # using sorted() method sort the string
 # after sorting strings are equal then it is anagram strings
 if sorted(str1) == sorted(str2):

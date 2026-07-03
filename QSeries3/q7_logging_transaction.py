@@ -1,14 +1,16 @@
 import logging
 
 logging.basicConfig(
-    filename="transaction.log",
+    filename="transacation.log",
     level=logging.ERROR,
     format="%(asctime)s - %(levelname)s - %(message)s",
 )
 
+
 # Custom Exception
 class InvalidTransactionError(Exception):
     """Custom Exception"""
+
     pass
 
 
@@ -23,6 +25,7 @@ def payment():
         Error details with timestamp and transaction ID
         into the transaction.log file.
     """
+
     transaction_id = input("Enter Transaction Id: ")
     amount = int(input("Enter Amount: "))
 
@@ -39,7 +42,7 @@ def payment():
 
     except InvalidTransactionError as e:
         logging.error(f"Transaction Id: {transaction_id} - {e}")
-        print("Transaction Failed")
+        print(f"Transaction {transaction_id} Failed")
+
 
 payment()
-print(payment.__doc__) #print doc string 

@@ -25,7 +25,7 @@ def calculator():
         int:multiplication of two numbers
         '''
         return a*b
-    #Access Inner functions
+    #Access inner function
     print("Addition of two numbers:",add(1234,1235))
     print("multiplication of two numbers:",multiply(120,20))
 
