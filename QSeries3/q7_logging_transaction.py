@@ -6,13 +6,11 @@ logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(message)s",
 )
 
-
 # Custom Exception
 class InvalidTransactionError(Exception):
     """Custom Exception"""
 
     pass
-
 
 def payment():
     """
@@ -43,6 +41,5 @@ def payment():
     except InvalidTransactionError as e:
         logging.error(f"Transaction Id: {transaction_id} - {e}")
         print(f"Transaction {transaction_id} Failed")
-
 
 payment()

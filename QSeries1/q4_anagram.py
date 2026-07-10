@@ -1,4 +1,3 @@
-# Input from user
 
 str1 = input("Enter a string1: ")
 str2 = input("Enter a string2: ")
