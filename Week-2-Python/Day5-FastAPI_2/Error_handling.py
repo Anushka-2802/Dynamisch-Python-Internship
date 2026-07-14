@@ -1,3 +1,9 @@
+'''
+Error handling is dectecting a problem and returning a meaningful response 
+instead of crashing the application 
+HTTPException is a class provided by FastAPI used to return HTTP Error 
+'''
+
 from fastapi import FastAPI,HTTPException
 
 app=FastAPI()
@@ -25,15 +31,16 @@ def get_employee(employee_id:int):
     }
     
 
-# Add employee whos age is greater than 18
+# Add employee: age is greater than 18
 
 @app.post("/employees/{employee_age}")
 def add_employee(employee_age:int):
     if employee_age < 18:
         raise HTTPException(
             status_code=400,
-            detail="Employee age must be 18"
+            detail="Employee age must be atleast 18 years old"
         )
     return{
         "message":"Employee added successfully"
     }
+
